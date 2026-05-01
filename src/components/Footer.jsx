@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       {/* footer section  */}
-      <div className="min-h-screen py-20">
+      <div className="py-12">
 
         {/* features section */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">

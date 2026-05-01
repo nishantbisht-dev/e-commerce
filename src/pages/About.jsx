@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div className='text-gray-900 min-h-screen'>
+        <div className='text-gray-900 min-h-screen mb-10'>
             {/* main  */}
             <section className='px-8 md:px-20 py-24 text-center border-b'>
                 <p className='uppercase tracking-[8px] text-sm text-gray-500'>Our Story</p>
@@ -38,10 +38,10 @@ const About = () => {
             </section>
 
             {/* Values  */}
-            <section className='bg-black text-white font-semibold text-center'>
-                <h2 className='text-5xl font-semibold text-center py-1'>Our Values</h2>
+            <section className='bg-black text-white font-semibold text-center mt-16'>
+                <h2 className='text-5xl font-semibold text-center py-12'>Our Values</h2>
 
-                <div className='grid md:grid-cols-3 gap-12 mt-16 text-center
+                <div className='grid md:grid-cols-3 gap-12 text-center py-5
                 '>
                     <div>
                         <h3 className='text-2xl font-semibold'>Quality</h3>
