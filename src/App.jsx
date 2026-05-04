@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
@@ -8,6 +9,8 @@ import Contact from "./pages/Contact";
 import Collection from "./pages/Collection";
 import NotFound from "./pages/NotFound";
 import SearchResults from "./pages/SearchResults";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 
 import { menProducts, womenProducts } from "./data/products";
 
@@ -61,6 +64,8 @@ const App = () => {
       <Route element={<MainLayout onSearch={handleSearch} />}>
         <Route index element={<Home />} />
         <Route path="/collection" element={<Collection />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route

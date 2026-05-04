@@ -72,7 +72,10 @@ const Navbar = ({ onSearch }) => {
         )}
 
         <FaUser />
-        <FaShoppingBag />
+        
+        <Link to="/cart">
+          <FaShoppingBag />
+        </Link>
       </div>
     </nav>
   );

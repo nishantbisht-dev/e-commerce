@@ -3,12 +3,15 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
+import { CartProvider } from "./context/CartContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter> 
-    {/* browser router is important because Link, NavLink, Routes, and Route only work inside a router. */}
-      <App />
+    <BrowserRouter>
+      <CartProvider>
+        {/* browser router is important because Link, NavLink, Routes, and Route only work inside a router. */}
+        <App />
+      </CartProvider>
     </BrowserRouter>
   </StrictMode>
 );
