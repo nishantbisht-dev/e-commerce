@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaSearch, FaShoppingBag, FaUser } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
+
 
 const Navbar = ({ onSearch }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState("");
   const navigate = useNavigate();
+    const { cartItems } = useCart();
+
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -72,9 +76,15 @@ const Navbar = ({ onSearch }) => {
         )}
 
         <FaUser />
-        
-        <Link to="/cart">
+
+        <Link to="/cart" className="relative">
           <FaShoppingBag />
+
+          {cartItems.length > 0 && (
+            <span className="absolute -top-3 -right-3 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              {cartItems.length}
+            </span>
+          )}
         </Link>
       </div>
     </nav>

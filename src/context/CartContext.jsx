@@ -14,23 +14,23 @@ export const CartProvider = ({ children }) => {
           item.size === size
       );
 
-    //   if (existingItem) {
-    //     return prev.map((item) =>
-    //       item === existingItem
-    //         ? { ...item, quantity: item.quantity + quantity }
-    //         : item
-    //     );
-    //   }
+      //   if (existingItem) {
+      //     return prev.map((item) =>
+      //       item === existingItem
+      //         ? { ...item, quantity: item.quantity + quantity }
+      //         : item
+      //     );
+      //   }
 
-    if (existingItem) {
-  return prev.map((item) =>
-    item.id === product.id &&
-    item.category === product.category &&
-    item.size === size
-      ? { ...item, quantity: item.quantity + quantity }
-      : item
-  );
-}
+      if (existingItem) {
+        return prev.map((item) =>
+          item.id === product.id &&
+            item.category === product.category &&
+            item.size === size
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      }
 
       return [...prev, { ...product, quantity, size }];
     });
@@ -40,8 +40,26 @@ export const CartProvider = ({ children }) => {
     setCartItems((prev) => prev.filter((_, i) => i !== index));
   };
 
+  const updateQuantity = (index, type) => {
+    setCartItems((prev) => prev.map((item, i) => {
+      if (i !== index) return item;
+
+      const newQty = type === "increase" ? item.quantity + 1 : item.quantity - 1;
+
+      return {
+        ...item, quantity: newQty,
+      }
+    })
+      .filter((item) => item.quantity > 0)
+    );
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  }
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, clearCart }}>
       {children}
     </CartContext.Provider>
   );
