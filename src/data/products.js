@@ -44,7 +44,7 @@ export const menProducts = [
         id: 6,
         name: "Men's Full Outfit Combo",
         price: "2000",
-        image: "https://i.pinimg.com/736x/1c/8b/1e/1c8b1e7a9d2f5c3a4c9e6b8f0a7d2e5.jpg",
+        image: "https://i.pinimg.com/736x/10/10/66/1010669b68cfad24c91ec978b82694e1.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our full outfit combo includes a top and bottom that are perfect for a complete look."
     },
@@ -52,7 +52,7 @@ export const menProducts = [
         id: 7,
         name: "Men's Formal Suit",
         price: "3000",
-        image: "https://i.pinimg.com/736x/1c/8b/1e/1c8b1e7a9d2f5c3a4c9e6b8f0a7d2e5.jpg",
+        image: "https://i.pinimg.com/1200x/01/e5/05/01e505203c5e22c50f028fb6d88ec17c.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our men's formal suit is perfect for special occasions and professional settings."
     },
@@ -60,7 +60,7 @@ export const menProducts = [
         id: 8,
         name: "Men's Casual Shirt",
         price: "600",
-        image: "https://i.pinimg.com/736x/1c/8b/1e/1c8b1e7a9d2f5c3a4c9e6b8f0a7d2e5.jpg",
+        image: "https://i.pinimg.com/736x/10/e0/1c/10e01c8c27ea4580c0b07d4dadbc2dcc.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our men's casual shirt is perfect for everyday wear and is available in a variety of colors and patterns."
     },
@@ -68,7 +68,7 @@ export const menProducts = [
         id: 9,
         name: "Men's Denim Jacket",
         price: "1200",
-        image: "https://i.pinimg.com/736x/1c/8b/1e/1c8b1e7a9d2f5c3a4c9e6b8f0a7d2e5.jpg",
+        image: "https://i.pinimg.com/736x/53/09/e6/5309e6b92f65c2fdd8f07afd7e54ef8d.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our men's denim jacket is a timeless piece that adds a cool and casual vibe to any outfit."
     },
@@ -76,7 +76,7 @@ export const menProducts = [
         id: 10,
         name: "Men's Leather Jacket",
         price: "2500",
-        image: "https://i.pinimg.com/736x/1c/8b/1e/1c8b1e7a9d2f5c3a4c9e6b8f0a7d2e5.jpg",
+        image: "https://i.pinimg.com/1200x/82/10/9e/82109e9a04ed1e8c3ece3d5426da851c.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our men's leather jacket is made from high-quality materials and is perfect for adding a touch of edge to your look."
     }
@@ -127,7 +127,7 @@ export const womenProducts = [
         id: 6,
         name: "Women Casual Shirt",
         price: "600",
-        image: "https://i.pinimg.com/736x/2d/19/04/2d19046d386cd4b00096b61a2799bfc1.jpg",
+        image: "https://i.pinimg.com/736x/7e/ff/fd/7efffde3cbdb1fe2e86037af27a40e0c.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our women's casual shirt is perfect for everyday wear and is available in a variety of colors and patterns."
     },
@@ -135,7 +135,7 @@ export const womenProducts = [
         id: 7,
         name: "Women Denim Jacket",
         price: "1200",
-        image: "https://i.pinimg.com/736x/2d/19/04/2d19046d386cd4b00096b61a2799bfc1.jpg",
+        image: "https://i.pinimg.com/1200x/10/fc/b6/10fcb65c4bac2ab1f98b36556320721c.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our women's denim jacket is a timeless piece that adds a cool and casual vibe to any outfit."
     },
@@ -143,7 +143,7 @@ export const womenProducts = [
         id: 8,
         name: "Women Leather Jacket",
         price: "2500",
-        image: "https://i.pinimg.com/736x/2d/19/04/2d19046d386cd4b00096b61a2799bfc1.jpg",
+        image: "https://i.pinimg.com/1200x/6e/3b/6c/6e3b6cff7af0c7e6445103d02f2bef5e.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our women's leather jacket is made from high-quality materials and is perfect for adding a touch of edge to your look."
     },
@@ -151,7 +151,7 @@ export const womenProducts = [
         id: 9,
         name: "Women's Floral Dress",
         price: "1200",
-        image: "https://i.pinimg.com/736x/2d/19/04/2d19046d386cd4b00096b61a2799bfc1.jpg",
+        image: "https://i.pinimg.com/736x/17/b3/22/17b322a3ad5739100771ef76a8d3caaf.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our women's floral dress is perfect for a feminine and elegant look."
     },
@@ -159,10 +159,18 @@ export const womenProducts = [
         id: 10,
         name: "Women's Casual Shirt",
         price: "600",
-        image: "https://i.pinimg.com/736x/2d/19/04/2d19046d386cd4b00096b61a2799bfc1.jpg",
+        image: "https://i.pinimg.com/736x/db/0d/9c/db0d9cb971770553b94705a3de4fa3e5.jpg",
         sizes: ["S", "M", "L", "XL"],
         description: "Our women's casual shirt is perfect for everyday wear and is available in a variety of colors and patterns."
-    }
+    },
+    {
+        id: 11,
+        name: "Women's Elegant Evening Gown",
+        price: "2000",
+        image: "https://i.pinimg.com/736x/71/e5/e9/71e5e91eed50b659c4d679a404c787db.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our women's elegant evening gown is perfect for special occasions and formal events."
+    },
 ]
 
 export const shoes = [
@@ -206,6 +214,47 @@ export const shoes = [
         sizes: ["S", "M", "L", "XL"],
         description: "Our women's comfortable flat sandal are perfect for everyday wear."
     },
+    {
+        id: 6,
+        name: "Men's Stylish Chelsea Boots",
+        price: "1300",
+        image: "https://i.pinimg.com/736x/d2/48/bc/d248bc955526822b4634e23a49c912e2.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our men's stylish chelsea boots are perfect for adding a touch of sophistication to your look."
+    },
+    {
+        id: 7,
+        name: "Women's Chic Ankle Boots",
+        price: "1100",
+        image: "https://i.pinimg.com/1200x/f4/d1/ab/f4d1ab5c221b51254a60d1e1f875b733.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our women's chic ankle boots are perfect for adding a stylish touch to your look."
+    },
+    {
+        id: 8,
+        name: "Unisex Casual Sneakers",
+        price: "700",
+        image: "https://i.pinimg.com/736x/07/ac/3e/07ac3e2aa0558dbf58fddc33a98c16dc.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our unisex casual sneakers are perfect for everyday wear and provide comfort and style."
+    },
+    {
+        id: 9,
+        name: "Men's Formal Business Shoes",
+        price: "1500",
+        image: "https://i.pinimg.com/1200x/a8/c3/da/a8c3dad72427b64a3c37238873210454.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our men's formal business shoes are perfect for professional settings and provide comfort and style."
+    },
+    {
+        id: 10,
+        name: "Women's Low Block Heels",
+        price: "1000",
+        image: "https://i.pinimg.com/1200x/55/c3/10/55c310e7b1b209edf020b8e558a35a00.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our women's low block heels are perfect for any outfit."
+    }
+    
 ];   
 
 export const accessories = [
@@ -243,5 +292,49 @@ export const accessories = [
         price: "600",
         image: "https://i.pinimg.com/736x/12/b7/b7/12b7b7b7ddb1ca517cb7eb89efaf266d.jpg",
         description: "Our women's elegant earrings are a perfect accessory for any outfit."
+    },
+    {
+        id: 6,
+        name: "Unisex Leather Belt",
+        price: "400",
+        image: "https://i.pinimg.com/1200x/cc/93/fe/cc93fe6a8f24faa6cba434aaa00ab133.jpg",
+        description: "Our unisex leather belt is made from high-quality materials and is perfect for adding a stylish touch to your look."
+    },
+    {
+        id: 7,
+        name: "Men's Classic Watch",
+        price: "1500",
+        image: "https://i.pinimg.com/1200x/bf/fe/67/bffe67d412b02477b999f395f4a9c8c6.jpg",
+        description: "Our men's classic watch is a timeless accessory that complements any outfit."
+    },
+    {
+        id: 8,
+        name: "Women's Chanel Perfume",
+        price: "600",
+        image: "https://i.pinimg.com/1200x/6f/92/9c/6f929cbe9a5a6fe6ff0a81f1e4c45dd8.jpg",
+        description: "Our women's chanel perfume is a perfect accessory for any outfit."
+    },
+    {
+        id: 9,
+        name: "Unisex Shirt",
+        price: "400",
+        image: "https://i.pinimg.com/736x/be/da/6c/beda6c8accd8e76d252a15b1fbcb1a3e.jpg",
+        description: "Our unisex shirt is made from high-quality materials and is perfect for adding a stylish touch to your look."
+    },
+    {
+        id: 10,
+        name: "Men's Classic Watch",
+        price: "1500",
+        image: "https://i.pinimg.com/1200x/f3/67/d0/f367d0dc87ac7b38d4a0cba82c589eec.jpg",
+        description: "Our men's classic watch is a timeless accessory that complements any outfit."
+    },
+    {
+        id: 11,
+        name: "Women's hat",
+        price: "1000",
+        image: "https://i.pinimg.com/1200x/d9/ba/7e/d9ba7ee4fba67aaf5cb4c1a9a6316a77.jpg",
+        sizes: ["S", "M", "L", "XL"],
+        description: "Our women's stylish hat is a perfect accessory for any outfit."
+
     }
 ];
