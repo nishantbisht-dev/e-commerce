@@ -12,6 +12,15 @@ import SearchResults from "./pages/SearchResults";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 
+import AdminLayout from "./admin/layouts/AdminLayout";
+import AdminLogin from "./admin/pages/AdminLogin";
+import AdminDashboard from "./admin/pages/AdminDashboard";
+import AddProduct from "./admin/pages/AddProduct";
+import ListProducts from "./admin/pages/ListProducts";
+import Orders from "./admin/pages/Orders";
+import AdminProtectedRoute from "./admin/components/AdminProtectedRoute";
+
+
 import { menProducts, womenProducts } from "./data/products";
 
 const allProducts = [...menProducts, ...womenProducts];
@@ -77,9 +86,34 @@ const App = () => {
             />
           }
         />
-      </Route>
 
-      <Route path="*" element={<NotFound />} />
+        {/* Public admin login */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+
+        {/* Protected admin routes */}
+        <Route
+          path="/admin"
+          element={
+            <AdminProtectedRoute>
+              <AdminLayout />
+            </AdminProtectedRoute>
+          }
+        >
+          {/* <Route path="/admin" element={<AdminLogin />} /> */}
+          {/* <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        </Route>
+        <Route path="/admin/add-product" element={<AddProduct />} />
+        <Route path="/admin/list-products" element={<ListProducts />} />
+        <Route path="/admin/orders" element={<Orders />} /> */}
+
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="add-product" element={<AddProduct />} />
+          <Route path="list-products" element={<ListProducts />} />
+          <Route path="orders" element={<Orders />} />
+        </Route>
+
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   );
 };
