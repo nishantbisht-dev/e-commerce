@@ -1,36 +1,38 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { menProducts, womenProducts, shoes, accessories } from "../data/products";
+import axios from "axios";
 import { useCart } from "../context/CartContext";
 
 function ProductDetails() {
   const { id } = useParams();
   const { addToCart } = useCart();
 
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
 
-  const parsePrice = (price) =>
-    Number(String(price).replace(/[^\d.]/g, ""));
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        setLoading(true);
+        const res = await axios.get(
+          `http://localhost:8000/api/products/${id}`
+        );
+        setProduct(res.data);
+      } catch (err) {
+        setError("Product not found.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const allProducts = useMemo(
-    () => [
-      ...menProducts.map((item) => ({ ...item, category: "men" })),
-      ...womenProducts.map((item) => ({ ...item, category: "women" })),
-      ...shoes.map((item) => ({ ...item, category: "shoes" })),
-      ...accessories.map((item) => ({ ...item, category: "accessories"})),
-    ],
-    []
-  );
-
-  const [category, productId] = id.split("-");
-
-  const product = allProducts.find(
-    (item) => item.category === category && item.id === Number(productId)
-  );
+    fetchProduct();
+  }, [id]);
 
   const handleAddToCart = () => {
-    if (product.sizes && product.sizes.length > 0 && !selectedSize) {
+    if (product?.sizes?.length > 0 && !selectedSize) {
       alert("Please select size");
       return;
     }
@@ -38,7 +40,15 @@ function ProductDetails() {
     addToCart(product, quantity, selectedSize);
   };
 
-  if (!product) {
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#f8f8f8] flex items-center justify-center">
+        <p className="text-gray-500">Loading product...</p>
+      </div>
+    );
+  }
+
+  if (error || !product) {
     return (
       <div className="min-h-screen bg-[#f8f8f8] flex items-center justify-center px-4">
         <div className="max-w-lg w-full text-center bg-white border border-gray-200 rounded-3xl p-10 shadow-sm">
@@ -66,7 +76,6 @@ function ProductDetails() {
     <div className="min-h-screen bg-[#f8f8f8] text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-10 items-start">
-          {/* Image */}
           <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm">
             <img
               src={product.image}
@@ -75,7 +84,6 @@ function ProductDetails() {
             />
           </div>
 
-          {/* Details */}
           <div className="bg-white border border-gray-200 rounded-3xl p-6 md:p-10 shadow-sm">
             <p className="uppercase tracking-[0.3em] text-xs text-gray-500">
               {product.category}
@@ -86,9 +94,7 @@ function ProductDetails() {
             </h1>
 
             <div className="mt-6 flex items-center gap-4">
-              <p className="text-3xl font-semibold">
-                ₹{parsePrice(product.price)}
-              </p>
+              <p className="text-3xl font-semibold">₹{product.price}</p>
               <span className="text-sm text-gray-400">
                 Inclusive of all taxes
               </span>
