@@ -116,11 +116,10 @@ function ProductDetails() {
                     <button
                       key={size}
                       onClick={() => setSelectedSize(size)}
-                      className={`min-w-12 px-5 py-3 rounded-full border text-sm transition ${
-                        selectedSize === size
-                          ? "bg-black text-white border-black"
-                          : "bg-white text-gray-700 border-gray-200 hover:border-gray-400"
-                      }`}
+                      className={`min-w-12 px-5 py-3 rounded-full border text-sm transition ${selectedSize === size
+                        ? "bg-black text-white border-black"
+                        : "bg-white text-gray-700 border-gray-200 hover:border-gray-400"
+                        }`}
                     >
                       {size}
                     </button>

@@ -156,9 +156,17 @@ const Cart = () => {
                 </div>
               </div>
 
-              <button className="w-full mt-8 px-6 py-4 rounded-full bg-black text-white text-sm tracking-widest uppercase hover:opacity-90 transition">
+              {/* <button className="w-full mt-8 px-6 py-4 rounded-full bg-black text-white text-sm tracking-widest uppercase hover:opacity-90 transition">
                 Proceed to Checkout
-              </button>
+              </button> */}
+
+              <Link
+                to="/checkout"
+                className="w-full mt-6 block text-center bg-black text-white py-3 tracking-widest"
+              >
+                PROCEED TO CHECKOUT
+              </Link>
+
 
               <Link
                 to="/collection"

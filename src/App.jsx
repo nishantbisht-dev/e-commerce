@@ -10,6 +10,8 @@ import NotFound from "./pages/NotFound";
 import SearchResults from "./pages/SearchResults";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+
 
 import { menProducts, womenProducts } from "./data/products";
 
@@ -53,6 +55,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/checkout" element={<Checkout/>}/>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
